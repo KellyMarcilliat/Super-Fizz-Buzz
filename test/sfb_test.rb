@@ -30,27 +30,6 @@ class SuperFizzBuzzTest < Minitest::Test
     assert_equal 1..1000, game.range
   end
 
-  # def test_it_calculates_modulo_seven
-  #   game = SuperFizzBuzz.new()
-  #   assert_equal 0, game.modulo_seven(7)
-  #   assert_equal 0, game.modulo_seven(21)
-  #   assert_equal 1, game.modulo_seven(15)
-  # end
-  #
-  # def test_it_calculates_modulo_five
-  #   game = SuperFizzBuzz.new()
-  #   assert_equal 0, game.modulo_five(5)
-  #   assert_equal 0, game.modulo_five(20)
-  #   assert_equal 1, game.modulo_five(16)
-  # end
-  #
-  # def test_it_calculates_modulo_three
-  #   game = SuperFizzBuzz.new()
-  #   assert_equal 0, game.modulo_three(3)
-  #   assert_equal 0, game.modulo_three(21)
-  #   assert_equal 1, game.modulo_three(19)
-  # end
-
   def test_it_populates_number_range_from_range
     game = SuperFizzBuzz.new(1, 2, 3, 4..7)
     assert_equal [4, 5, 6, 7], game.populate_number_range

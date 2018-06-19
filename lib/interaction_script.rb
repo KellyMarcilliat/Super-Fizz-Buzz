@@ -17,7 +17,7 @@ first = $stdin.gets.chomp.to_i
   if first == 0
     first = 42
     puts "\nDivision by zero is undefined.  So, to save you from a certain and imminent cessation of your very existence, I've just made the number 42."
-    sleep 4
+    sleep 6
     puts "\nYou're welcome."
   end
 
@@ -26,7 +26,7 @@ second = $stdin.gets.chomp.to_i
   if second == 0
     second = 42
     puts "\nDivision by zero is undefined.  So, to save you from a certain and imminent cessation of your very existence, I've just made the number 42."
-    sleep 4
+    sleep 6
     puts "\nYou're welcome."
   end
 
@@ -35,12 +35,12 @@ third = $stdin.gets.chomp.to_i
   if third == 0
     third = 42
     puts "\nDivision by zero is undefined.  So, to save you from a certain and imminent cessation of your very existence, I've just made the number 42."
-    sleep 4
+    sleep 6
     puts "\nYou're welcome."
   end
 
 puts "\nGreat!  You're DIVISIBLE BYs are #{first}, #{second}, and #{third}.  Now for the range..."
-sleep 4
+sleep 3
 
 puts "\nPlease give me a number for the low end of your range. > "
 sleep 2
@@ -49,14 +49,21 @@ low_end = $stdin.gets.chomp.to_i
 puts "\nOkay, now a number for your high end.  (Please make it bigger than your low end number, so I don't have to do extra work.)  If you want a one-number range, just enter the same number again. > "
 sleep 2
 high_end = $stdin.gets.chomp.to_i
+if high_end < low_end
+  high_end = low_end * 2
+  puts "You just had to try that, didn't you."
+  sleep 2
+  puts "Your high end number is now your low end number times 2."
+  sleep 2
+end
 
 puts "\nSweet!  You're range is #{low_end} to #{high_end}."
-sleep 3
+sleep 2
 puts "\nNow, let's run your numbers!"
 range = low_end..high_end
 sleep 3
 print "\a"
-system('say "beep"')
+system('say "tehdaah!"')
 
 game = SuperFizzBuzz.new(first, second, third, range)
 game.output
